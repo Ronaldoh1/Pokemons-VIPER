@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F27C11A31E76B93000045431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11A21E76B93000045431 /* AppDelegate.swift */; };
-		F27C11A51E76B93000045431 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11A41E76B93000045431 /* ViewController.swift */; };
 		F27C11AA1E76B93000045431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27C11A91E76B93000045431 /* Assets.xcassets */; };
 		F27C11AD1E76B93000045431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27C11AB1E76B93000045431 /* LaunchScreen.storyboard */; };
+		F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */; };
+		F27C11CA1E76C17500045431 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11C91E76C17500045431 /* ListViewController.swift */; };
+		F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F27C119F1E76B93000045431 /* Pokemons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27C11A21E76B93000045431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F27C11A41E76B93000045431 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F27C11A91E76B93000045431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F27C11AC1E76B93000045431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F27C11AE1E76B93000045431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
+		F27C11C91E76C17500045431 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNavigationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +56,159 @@
 		F27C11A11E76B93000045431 /* Pokemons */ = {
 			isa = PBXGroup;
 			children = (
-				F27C11A21E76B93000045431 /* AppDelegate.swift */,
-				F27C11A41E76B93000045431 /* ViewController.swift */,
+				F27C11C11E76BBBC00045431 /* Setup */,
+				F27C11BC1E76BB3800045431 /* Modules */,
+				F27C11B41E76BAE000045431 /* Common */,
 				F27C11A91E76B93000045431 /* Assets.xcassets */,
 				F27C11AB1E76B93000045431 /* LaunchScreen.storyboard */,
 				F27C11AE1E76B93000045431 /* Info.plist */,
 			);
 			path = Pokemons;
+			sourceTree = "<group>";
+		};
+		F27C11B41E76BAE000045431 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11B91E76BB0800045431 /* Views */,
+				F27C11B81E76BB0200045431 /* Services */,
+				F27C11B71E76BAFA00045431 /* Extensions */,
+				F27C11B61E76BAF300045431 /* Protocols */,
+				F27C11B51E76BAEA00045431 /* NavigationHandler */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		F27C11B51E76BAEA00045431 /* NavigationHandler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NavigationHandler;
+			sourceTree = "<group>";
+		};
+		F27C11B61E76BAF300045431 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F27C11B71E76BAFA00045431 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F27C11B81E76BB0200045431 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11BB1E76BB2900045431 /* Camera */,
+				F27C11BA1E76BB1F00045431 /* PhotoLibrary */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		F27C11B91E76BB0800045431 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F27C11BA1E76BB1F00045431 /* PhotoLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PhotoLibrary;
+			sourceTree = "<group>";
+		};
+		F27C11BB1E76BB2900045431 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		F27C11BC1E76BB3800045431 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11C01E76BBAC00045431 /* Add */,
+				F27C11BF1E76BBA200045431 /* Details */,
+				F27C11BD1E76BB9200045431 /* List */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		F27C11BD1E76BB9200045431 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11C81E76BE3A00045431 /* Contract */,
+				F27C11C71E76BE3000045431 /* Interactor */,
+				F27C11C61E76BE2600045431 /* Presenter */,
+				F27C11C51E76BE2000045431 /* NavigationHandler */,
+				F27C11C41E76BC8A00045431 /* View */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		F27C11BF1E76BBA200045431 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Details;
+			sourceTree = "<group>";
+		};
+		F27C11C01E76BBAC00045431 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		F27C11C11E76BBBC00045431 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11A21E76B93000045431 /* AppDelegate.swift */,
+				F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
+		F27C11C41E76BC8A00045431 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11C91E76C17500045431 /* ListViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F27C11C51E76BE2000045431 /* NavigationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */,
+			);
+			name = NavigationHandler;
+			sourceTree = "<group>";
+		};
+		F27C11C61E76BE2600045431 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		F27C11C71E76BE3000045431 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		F27C11C81E76BE3A00045431 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Contract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,8 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27C11A51E76B93000045431 /* ViewController.swift in Sources */,
 				F27C11A31E76B93000045431 /* AppDelegate.swift in Sources */,
+				F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */,
+				F27C11CA1E76C17500045431 /* ListViewController.swift in Sources */,
+				F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
