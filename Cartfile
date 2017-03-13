@@ -1,0 +1,6 @@
+#networking
+github "Alamofire/Alamofire"
+
+
+#mapping
+github "bignerdranch/Freddy" ~> 3.0

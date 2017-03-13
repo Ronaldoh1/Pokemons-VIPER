@@ -13,6 +13,8 @@
 		F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */; };
 		F27C11CA1E76C17500045431 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11C91E76C17500045431 /* ListViewController.swift */; };
 		F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */; };
+		F27C11D01E76C8CD00045431 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27C11CE1E76C8CD00045431 /* Alamofire.framework */; };
+		F27C11D11E76C8CD00045431 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27C11CF1E76C8CD00045431 /* Freddy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
 		F27C11C91E76C17500045431 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNavigationHandler.swift; sourceTree = "<group>"; };
+		F27C11CE1E76C8CD00045431 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		F27C11CF1E76C8CD00045431 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27C11D01E76C8CD00045431 /* Alamofire.framework in Frameworks */,
+				F27C11D11E76C8CD00045431 /* Freddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +48,7 @@
 			children = (
 				F27C11A11E76B93000045431 /* Pokemons */,
 				F27C11A01E76B93000045431 /* Products */,
+				F27C11CD1E76C8CB00045431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +216,15 @@
 			children = (
 			);
 			name = Contract;
+			sourceTree = "<group>";
+		};
+		F27C11CD1E76C8CB00045431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11CE1E76C8CD00045431 /* Alamofire.framework */,
+				F27C11CF1E76C8CD00045431 /* Freddy.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +414,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Pokemons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ronaldoh1.Pokemons;
@@ -410,6 +430,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Pokemons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ronaldoh1.Pokemons;
