@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 
 class PokemonCell: UITableViewCell {
@@ -30,7 +31,7 @@ class PokemonCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        setUpViews()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,8 +40,22 @@ class PokemonCell: UITableViewCell {
 
     func configureCell(pokemon: Pokemon) {
         self.nameLabel.text = pokemon.name
+        self.profileImage.af_setImage(withURL: pokemon.url)
     }
 
+    private func setUpViews() {
+        self.addSubview(profileImage)
 
+        profileImage.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 12).isActive = true
+        profileImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
+        profileImage.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        profileImage.heightAnchor.constraint(equalToConstant: 50).isActive = true
+
+        self.addSubview(nameLabel)
+
+        nameLabel.leftAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 5).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
+        nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 12).isActive = true
+    }
 
 }
