@@ -19,6 +19,8 @@
 		F27C11D71E76CA9D00045431 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D61E76CA9D00045431 /* Endpoint.swift */; };
 		F27C11DA1E76D5F100045431 /* PokemonsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D91E76D5F100045431 /* PokemonsContract.swift */; };
 		F27C11DC1E76D64600045431 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11DB1E76D64600045431 /* Pokemon.swift */; };
+		F27C11DF1E76DC7800045431 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11DE1E76DC7800045431 /* PokemonCell.swift */; };
+		F27C11E11E76E0BE00045431 /* UIImageView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11E01E76E0BE00045431 /* UIImageView + Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		F27C11D61E76CA9D00045431 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F27C11D91E76D5F100045431 /* PokemonsContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonsContract.swift; sourceTree = "<group>"; };
 		F27C11DB1E76D64600045431 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		F27C11DE1E76DC7800045431 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		F27C11E01E76E0BE00045431 /* UIImageView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView + Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		F27C11B71E76BAFA00045431 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F27C11E01E76E0BE00045431 /* UIImageView + Utils.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 		F27C11C41E76BC8A00045431 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F27C11DD1E76DC6A00045431 /* Cells */,
 				F27C11C91E76C17500045431 /* ListViewController.swift */,
 			);
 			name = View;
@@ -261,6 +267,14 @@
 				F27C11DB1E76D64600045431 /* Pokemon.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		F27C11DD1E76DC6A00045431 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11DE1E76DC7800045431 /* PokemonCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27C11E11E76E0BE00045431 /* UIImageView + Utils.swift in Sources */,
 				F27C11A31E76B93000045431 /* AppDelegate.swift in Sources */,
 				F27C11DC1E76D64600045431 /* Pokemon.swift in Sources */,
 				F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */,
@@ -342,6 +357,7 @@
 				F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */,
 				F27C11D71E76CA9D00045431 /* Endpoint.swift in Sources */,
 				F27C11D41E76C9F000045431 /* API.swift in Sources */,
+				F27C11DF1E76DC7800045431 /* PokemonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

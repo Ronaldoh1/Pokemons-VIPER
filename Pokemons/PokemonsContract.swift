@@ -6,8 +6,11 @@
 //  Copyright © 2017 Ronaldoh1. All rights reserved.
 //
 
-protocol PokemonsInterface: class {
 
-    func showPokemonsData(pokemons:[])
+// protocol that defines the view input method 
+
+protocol PokemonsViewInterface: class {
+
+    func showPokemonsData(pokemons:[Pokemon])
     func showNoContentScreen()
 }
