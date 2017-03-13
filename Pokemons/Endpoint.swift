@@ -26,6 +26,13 @@ enum Endpoint {
                 return "\(API.baseUrl)\(path)"
             }
         }
+
+        public var method: String {
+            switch self {
+            case .fetchPokemons:
+                return "GET"
+            }
+        }
     }
 
 }

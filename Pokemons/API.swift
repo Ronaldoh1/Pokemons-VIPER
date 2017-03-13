@@ -19,5 +19,6 @@ protocol EndPoint {
 
     var path: String { get }
     var url: String { get }
+    var method: String { get } 
     
 }

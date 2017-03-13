@@ -17,6 +17,8 @@
 		F27C11D11E76C8CD00045431 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27C11CF1E76C8CD00045431 /* Freddy.framework */; };
 		F27C11D41E76C9F000045431 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D31E76C9F000045431 /* API.swift */; };
 		F27C11D71E76CA9D00045431 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D61E76CA9D00045431 /* Endpoint.swift */; };
+		F27C11DA1E76D5F100045431 /* PokemonsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D91E76D5F100045431 /* PokemonsContract.swift */; };
+		F27C11DC1E76D64600045431 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11DB1E76D64600045431 /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		F27C11CF1E76C8CD00045431 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 		F27C11D31E76C9F000045431 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F27C11D61E76CA9D00045431 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F27C11D91E76D5F100045431 /* PokemonsContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonsContract.swift; sourceTree = "<group>"; };
+		F27C11DB1E76D64600045431 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		F27C11BD1E76BB9200045431 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				F27C11D81E76D59D00045431 /* Models */,
 				F27C11D51E76CA6D00045431 /* Service */,
 				F27C11C81E76BE3A00045431 /* Contract */,
 				F27C11C71E76BE3000045431 /* Interactor */,
@@ -220,6 +225,7 @@
 		F27C11C81E76BE3A00045431 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				F27C11D91E76D5F100045431 /* PokemonsContract.swift */,
 			);
 			name = Contract;
 			sourceTree = "<group>";
@@ -247,6 +253,14 @@
 				F27C11D61E76CA9D00045431 /* Endpoint.swift */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		F27C11D81E76D59D00045431 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F27C11DB1E76D64600045431 /* Pokemon.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +335,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27C11A31E76B93000045431 /* AppDelegate.swift in Sources */,
+				F27C11DC1E76D64600045431 /* Pokemon.swift in Sources */,
 				F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */,
+				F27C11DA1E76D5F100045431 /* PokemonsContract.swift in Sources */,
 				F27C11CA1E76C17500045431 /* ListViewController.swift in Sources */,
 				F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */,
 				F27C11D71E76CA9D00045431 /* Endpoint.swift in Sources */,
