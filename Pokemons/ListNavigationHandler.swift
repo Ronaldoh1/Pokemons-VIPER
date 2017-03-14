@@ -11,8 +11,11 @@ import UIKit
 
 class ListNavigationHandler: NSObject {
 
+    var pokemonsPresenter: PokemonsPresenter?
+
     func presentListViewController(in window: UIWindow) {
         let viewController = ListViewController()
+        viewController.presenter = pokemonsPresenter
         window.rootViewController = UINavigationController(rootViewController: viewController)
     }
 }

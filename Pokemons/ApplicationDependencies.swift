@@ -22,6 +22,10 @@ class ApplicationDependencies {
     }
 
     func configureDependencies() {
+        let pokemonsPresenter = PokemonsPresenter()
+        let pokemonsInteractor = PokemonsInteractor()
 
+        pokemonsPresenter.interactor = pokemonsInteractor
+        listNavigationHandler.pokemonsPresenter = pokemonsPresenter
     }
 }

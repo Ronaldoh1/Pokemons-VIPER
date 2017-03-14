@@ -7,24 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F2082F491E7823E600F7AA3F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F22F13B21E77AFBD005F0F78 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2082F4A1E7823E600F7AA3F /* AlamofireImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F22F13B31E77AFBD005F0F78 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F2082F4B1E7823E600F7AA3F /* Freddy.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F22F13B41E77AFBD005F0F78 /* Freddy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F22F13B51E77AFBD005F0F78 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22F13B21E77AFBD005F0F78 /* Alamofire.framework */; };
+		F22F13B61E77AFBD005F0F78 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22F13B31E77AFBD005F0F78 /* AlamofireImage.framework */; };
+		F22F13B71E77AFBD005F0F78 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22F13B41E77AFBD005F0F78 /* Freddy.framework */; };
 		F27C11A31E76B93000045431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11A21E76B93000045431 /* AppDelegate.swift */; };
 		F27C11AA1E76B93000045431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27C11A91E76B93000045431 /* Assets.xcassets */; };
 		F27C11AD1E76B93000045431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27C11AB1E76B93000045431 /* LaunchScreen.storyboard */; };
 		F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */; };
 		F27C11CA1E76C17500045431 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11C91E76C17500045431 /* ListViewController.swift */; };
 		F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */; };
-		F27C11D01E76C8CD00045431 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27C11CE1E76C8CD00045431 /* Alamofire.framework */; };
-		F27C11D11E76C8CD00045431 /* Freddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27C11CF1E76C8CD00045431 /* Freddy.framework */; };
 		F27C11D41E76C9F000045431 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D31E76C9F000045431 /* API.swift */; };
 		F27C11D71E76CA9D00045431 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D61E76CA9D00045431 /* Endpoint.swift */; };
 		F27C11DA1E76D5F100045431 /* PokemonsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11D91E76D5F100045431 /* PokemonsContract.swift */; };
 		F27C11DC1E76D64600045431 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11DB1E76D64600045431 /* Pokemon.swift */; };
 		F27C11DF1E76DC7800045431 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11DE1E76DC7800045431 /* PokemonCell.swift */; };
 		F27C11E11E76E0BE00045431 /* UIImageView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C11E01E76E0BE00045431 /* UIImageView + Utils.swift */; };
-		F27C11E31E76E63300045431 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27C11E21E76E63300045431 /* AlamofireImage.framework */; };
+		F27C12061E771BC500045431 /* PokemonsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C12051E771BC500045431 /* PokemonsPresenter.swift */; };
+		F27C12081E771D4200045431 /* ViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C12071E771D4200045431 /* ViewProtocols.swift */; };
+		F27C120B1E7720D200045431 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C120A1E7720D200045431 /* SortType.swift */; };
+		F27C120D1E7723FF00045431 /* PokemonsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C120C1E7723FF00045431 /* PokemonsInteractor.swift */; };
+		F27C120F1E77255400045431 /* PokemonsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C120E1E77255400045431 /* PokemonsAPIService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F2082F481E78239F00F7AA3F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F2082F491E7823E600F7AA3F /* Alamofire.framework in CopyFiles */,
+				F2082F4A1E7823E600F7AA3F /* AlamofireImage.framework in CopyFiles */,
+				F2082F4B1E7823E600F7AA3F /* Freddy.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F22F13B21E77AFBD005F0F78 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		F22F13B31E77AFBD005F0F78 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		F22F13B41E77AFBD005F0F78 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 		F27C119F1E76B93000045431 /* Pokemons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokemons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27C11A21E76B93000045431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F27C11A91E76B93000045431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,15 +59,17 @@
 		F27C11C21E76BBDC00045431 /* ApplicationDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationDependencies.swift; sourceTree = "<group>"; };
 		F27C11C91E76C17500045431 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F27C11CB1E76C20E00045431 /* ListNavigationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNavigationHandler.swift; sourceTree = "<group>"; };
-		F27C11CE1E76C8CD00045431 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		F27C11CF1E76C8CD00045431 /* Freddy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Freddy.framework; path = Carthage/Build/iOS/Freddy.framework; sourceTree = "<group>"; };
 		F27C11D31E76C9F000045431 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F27C11D61E76CA9D00045431 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		F27C11D91E76D5F100045431 /* PokemonsContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonsContract.swift; sourceTree = "<group>"; };
 		F27C11DB1E76D64600045431 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		F27C11DE1E76DC7800045431 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
 		F27C11E01E76E0BE00045431 /* UIImageView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView + Utils.swift"; sourceTree = "<group>"; };
-		F27C11E21E76E63300045431 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		F27C12051E771BC500045431 /* PokemonsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonsPresenter.swift; sourceTree = "<group>"; };
+		F27C12071E771D4200045431 /* ViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProtocols.swift; sourceTree = "<group>"; };
+		F27C120A1E7720D200045431 /* SortType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
+		F27C120C1E7723FF00045431 /* PokemonsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonsInteractor.swift; sourceTree = "<group>"; };
+		F27C120E1E77255400045431 /* PokemonsAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonsAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,9 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27C11E31E76E63300045431 /* AlamofireImage.framework in Frameworks */,
-				F27C11D01E76C8CD00045431 /* Alamofire.framework in Frameworks */,
-				F27C11D11E76C8CD00045431 /* Freddy.framework in Frameworks */,
+				F22F13B51E77AFBD005F0F78 /* Alamofire.framework in Frameworks */,
+				F22F13B61E77AFBD005F0F78 /* AlamofireImage.framework in Frameworks */,
+				F22F13B71E77AFBD005F0F78 /* Freddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +119,7 @@
 		F27C11B41E76BAE000045431 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F27C12091E7720C500045431 /* Enums */,
 				F27C11D21E76C96A00045431 /* Network */,
 				F27C11B91E76BB0800045431 /* Views */,
 				F27C11B81E76BB0200045431 /* Services */,
@@ -111,6 +140,7 @@
 		F27C11B61E76BAF300045431 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				F27C12071E771D4200045431 /* ViewProtocols.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -220,6 +250,7 @@
 		F27C11C61E76BE2600045431 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F27C12051E771BC500045431 /* PokemonsPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -227,6 +258,7 @@
 		F27C11C71E76BE3000045431 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F27C120C1E7723FF00045431 /* PokemonsInteractor.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -242,9 +274,9 @@
 		F27C11CD1E76C8CB00045431 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F27C11E21E76E63300045431 /* AlamofireImage.framework */,
-				F27C11CE1E76C8CD00045431 /* Alamofire.framework */,
-				F27C11CF1E76C8CD00045431 /* Freddy.framework */,
+				F22F13B21E77AFBD005F0F78 /* Alamofire.framework */,
+				F22F13B31E77AFBD005F0F78 /* AlamofireImage.framework */,
+				F22F13B41E77AFBD005F0F78 /* Freddy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				F27C11D31E76C9F000045431 /* API.swift */,
+				F27C120E1E77255400045431 /* PokemonsAPIService.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -281,6 +314,14 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		F27C12091E7720C500045431 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F27C120A1E7720D200045431 /* SortType.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -291,6 +332,7 @@
 				F27C119B1E76B93000045431 /* Sources */,
 				F27C119C1E76B93000045431 /* Frameworks */,
 				F27C119D1E76B93000045431 /* Resources */,
+				F2082F481E78239F00F7AA3F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -352,15 +394,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F27C120F1E77255400045431 /* PokemonsAPIService.swift in Sources */,
 				F27C11E11E76E0BE00045431 /* UIImageView + Utils.swift in Sources */,
 				F27C11A31E76B93000045431 /* AppDelegate.swift in Sources */,
+				F27C120B1E7720D200045431 /* SortType.swift in Sources */,
 				F27C11DC1E76D64600045431 /* Pokemon.swift in Sources */,
+				F27C12061E771BC500045431 /* PokemonsPresenter.swift in Sources */,
 				F27C11C31E76BBDC00045431 /* ApplicationDependencies.swift in Sources */,
+				F27C120D1E7723FF00045431 /* PokemonsInteractor.swift in Sources */,
 				F27C11DA1E76D5F100045431 /* PokemonsContract.swift in Sources */,
 				F27C11CA1E76C17500045431 /* ListViewController.swift in Sources */,
 				F27C11CC1E76C20E00045431 /* ListNavigationHandler.swift in Sources */,
 				F27C11D71E76CA9D00045431 /* Endpoint.swift in Sources */,
 				F27C11D41E76C9F000045431 /* API.swift in Sources */,
+				F27C12081E771D4200045431 /* ViewProtocols.swift in Sources */,
 				F27C11DF1E76DC7800045431 /* PokemonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +568,7 @@
 				F27C11B31E76B93000045431 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
