@@ -12,17 +12,18 @@ import Freddy
 
 class PokemonsAPIService {
 
-    static func fetchPokemons(completionHandler: @escaping (DataResponse<Pokemon>) -> Void) -> Alamofire.DataRequest {
+    static func fetchPokemons(completionHandler: @escaping (DataResponse<Any>) -> Void) -> Alamofire.DataRequest {
 
         return Alamofire.request(Endpoint.Pokemons.fetchPokemons.url, method: .get).responseJSON(completionHandler: { (response) in
 
-            let pokemonResponse = response.flatMap { json in
-
-                try Pokemon(json: json as! JSON)
-
-            }
-            completionHandler(pokemonResponse)
+            completionHandler(response)
         })
 
+    }
+
+    private func pokemons(json: DataResponse<Any>) -> [Pokemon] {
+        let array = [Pokemon]()
+
+        return array
     }
 }

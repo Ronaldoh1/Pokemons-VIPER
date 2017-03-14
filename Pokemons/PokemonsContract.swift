@@ -35,7 +35,7 @@ protocol PokemonsPresentation: class {
 
 protocol PokemonsUseCase: class {
     weak var output: PokemonsInteractorOutput! { get set}
-    func fetchPokemons()
+    func fetchPokemons(completion:(Pokemons) -> ()?)
 }
 
 protocol PokemonsInteractorOutput: class {

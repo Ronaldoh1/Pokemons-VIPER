@@ -24,11 +24,13 @@ class PokemonsPresenter: NSObject, PokemonsPresentation {
     }
 
     func viewDidLoad() {
-        interactor.fetchPokemons()
+        interactor.fetchPokemons { (pokemons) in
+            print(pokemons)
+        }
     }
 
     func didSelectPokemon(_ pokemon: Pokemon) {
-
+        
     }
 
     func didClickSortButton() {
@@ -58,6 +60,14 @@ extension PokemonsPresenter: PokemonsInteractorOutput {
 
 extension PokemonsPresenter: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
+    
 }
 
 extension PokemonsPresenter: UITableViewDataSource {
@@ -67,8 +77,7 @@ extension PokemonsPresenter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-         cell.backgroundColor = .blue
+        let cell = tableView.dequeueReusableCell(withIdentifier: PokemonCell.identifier, for: indexPath)
         return cell
     }
 }

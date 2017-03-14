@@ -19,14 +19,16 @@ class ListViewController: UIViewController {
         tableView.delegate = self.presenter
         tableView.dataSource = self.presenter
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 80
+        tableView.estimatedRowHeight = 70
         tableView.showsVerticalScrollIndicator = true
         tableView.separatorStyle = .singleLine
         tableView.backgroundColor = .white
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(PokemonCell.self, forCellReuseIdentifier: PokemonCell.identifier)
         return tableView
     }()
 
+    // MARK: LifeCyle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,15 +48,7 @@ class ListViewController: UIViewController {
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
-    // MARK: PokemonsViewInterface 
 
-    func showNoContentScreen() {
-        print("showing empty screen")
-    }
-
-    func showPokemonsData(pokemons: [Pokemon]) {
-
-    }
 
 }
 

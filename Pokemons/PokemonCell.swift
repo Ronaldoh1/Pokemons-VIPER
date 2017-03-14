@@ -17,8 +17,14 @@ class PokemonCell: UITableViewCell {
     private let profileImage: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 15
         imageView.layer.masksToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.borderWidth = 2
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.blue.cgColor
+        imageView.layer.cornerRadius = 25
+        imageView.clipsToBounds = true
+        imageView.image = #imageLiteral(resourceName: "picachu")
         return imageView
     }()
 
@@ -26,6 +32,8 @@ class PokemonCell: UITableViewCell {
         let label = UILabel()
         label.text = "Ron is awesome"
         label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .red
         return label
     }()
 
@@ -54,8 +62,8 @@ class PokemonCell: UITableViewCell {
         self.addSubview(nameLabel)
 
         nameLabel.leftAnchor.constraint(equalTo: profileImage.rightAnchor, constant: 5).isActive = true
-        nameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 12).isActive = true
-        nameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 12).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: profileImage.topAnchor, constant: 12).isActive = true
+        nameLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 12).isActive = true
     }
 
 }

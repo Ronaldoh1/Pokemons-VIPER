@@ -10,11 +10,20 @@ import Alamofire
 import Foundation
 
 class PokemonsInteractor: PokemonsUseCase {
+
+
     weak var output: PokemonsInteractorOutput!
 
-    func fetchPokemons() {
+    func fetchPokemons(completion:(Pokemons) -> ()?) {
+        //var pokemons:Pokemons?
+        
         PokemonsAPIService.fetchPokemons { (response) in
-            print(response.debugDescription)
+            switch response.result {
+            case .success(let data): break
+                //pokemons = Pokemons(json: data)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 
