@@ -24,7 +24,6 @@ class PokemonCell: UITableViewCell {
         imageView.layer.borderColor = UIColor.blue.cgColor
         imageView.layer.cornerRadius = 25
         imageView.clipsToBounds = true
-        imageView.image = #imageLiteral(resourceName: "picachu")
         return imageView
     }()
 
@@ -48,7 +47,8 @@ class PokemonCell: UITableViewCell {
 
     func configureCell(pokemon: Pokemon) {
         self.nameLabel.text = pokemon.name
-        self.profileImage.af_setImage(withURL: pokemon.url)
+        
+        self.profileImage.downloadImageFrom(link: pokemon.url, contentMode: UIViewContentMode.scaleAspectFit)
     }
 
     private func setUpViews() {

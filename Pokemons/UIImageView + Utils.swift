@@ -9,6 +9,15 @@
 import UIKit
 
 extension UIImageView {
-
-
+    
+    func downloadImageFrom(link: URL, contentMode: UIViewContentMode) {
+        URLSession.shared.dataTask( with: link, completionHandler: {
+            (data, response, error) -> Void in
+            DispatchQueue.main.async {
+                self.contentMode =  contentMode
+                if let data = data { self.image = UIImage(data: data) }
+            }
+        }).resume()
+    }
+    
 }
