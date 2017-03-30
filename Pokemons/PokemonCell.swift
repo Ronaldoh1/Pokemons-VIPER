@@ -29,7 +29,6 @@ class PokemonCell: UITableViewCell {
 
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Ron is awesome"
         label.font = UIFont.systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .red
@@ -47,7 +46,6 @@ class PokemonCell: UITableViewCell {
 
     func configureCell(pokemon: Pokemon) {
         self.nameLabel.text = pokemon.name
-        
         self.profileImage.downloadImageFrom(link: pokemon.url, contentMode: UIViewContentMode.scaleAspectFit)
     }
 

@@ -16,3 +16,15 @@ protocol IndicatableView: class {
     func hideActivityIndicator()
     
 }
+
+extension IndicatableView {
+    
+    func showActivityIndicator() {
+        print("Showing activity Indicator")
+    }
+    
+    func hideActivityIndicator() {
+        print("I'm hiding dude")
+    }
+    
+}

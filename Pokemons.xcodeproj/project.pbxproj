@@ -169,16 +169,8 @@
 				F27C11B81E76BB0200045431 /* Services */,
 				F27C11B71E76BAFA00045431 /* Extensions */,
 				F27C11B61E76BAF300045431 /* Protocols */,
-				F27C11B51E76BAEA00045431 /* NavigationHandler */,
 			);
 			name = Common;
-			sourceTree = "<group>";
-		};
-		F27C11B51E76BAEA00045431 /* NavigationHandler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NavigationHandler;
 			sourceTree = "<group>";
 		};
 		F27C11B61E76BAF300045431 /* Protocols */ = {

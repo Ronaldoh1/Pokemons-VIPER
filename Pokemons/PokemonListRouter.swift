@@ -16,7 +16,7 @@ class PokemonListRouter: PokemonListRouterProtocol {
     
     func presentListViewController(in window: UIWindow) {
         let viewController = ListViewController()
-        let presenter: PokemonListPresenterProtocol & PokemonListInteractorOutputProtocol = PokemonListPresenter()
+        let presenter = PokemonListPresenter()
         let interactor: PokemonListInteractorInputProtocol & PokemonListRemoteDataManagerOutputProtocol = PokemonListInteractor()
         let remoteDataManager: PokemonListRemoteDataManagerInputProtocol = PokemonListRemoteDataManager()
         let router: PokemonListRouterProtocol = PokemonListRouter()

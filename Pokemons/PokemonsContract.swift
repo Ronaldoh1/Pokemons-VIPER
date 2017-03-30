@@ -35,6 +35,7 @@ protocol PokemonListPresenterProtocol: class {
 
     var interactor: PokemonListInteractorInputProtocol? {get set }
     var router: PokemonListRouterProtocol? { get set }
+    weak var pokemonTableView: UITableView? { get set }
 
     func viewDidLoad()
     func showPokemonDetail(for pokemon: Pokemon)

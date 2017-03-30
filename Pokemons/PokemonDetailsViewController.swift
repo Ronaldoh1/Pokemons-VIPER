@@ -18,6 +18,7 @@ class PokemonDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         presenter?.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,4 +35,19 @@ extension PokemonDetailViewController: PokemonDetailViewProtocol {
         self.navigationItem.title = pokemon.name
     }
     
+}
+
+extension PokemonDetailViewController: IndicatableView {
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+       
+       self.hideActivityIndicator()
+    }
+    
+    func hideActivityIndicator() {
+        print("this is my new implementation")
+    }
+    
+   
 }
