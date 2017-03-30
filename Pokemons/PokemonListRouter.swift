@@ -36,7 +36,12 @@ class PokemonListRouter: PokemonListRouterProtocol {
     }
     
     func presentPokemonDetailsScreen(from view: PokemonListViewProtocol, for pokemon: Pokemon) {
+        let pokemonDetailViewController = PokemonDetailRouter.createPokemonDetailModule(for: pokemon)
         
+        guard let view = view as? UIViewController else {
+            return
+        }
+        view.navigationController?.pushViewController(pokemonDetailViewController, animated: true)
     }
 
 }

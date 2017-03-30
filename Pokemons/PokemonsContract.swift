@@ -39,7 +39,7 @@ protocol PokemonListPresenterProtocol: class {
     var router: PokemonListRouterProtocol? { get set }
 
     func viewDidLoad()
-    func didSelectPokemon(_ pokemon: Pokemon)
+    func showPokemonDetail(for pokemon: Pokemon)
 
 }
 

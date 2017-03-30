@@ -85,7 +85,7 @@ extension ListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+       presenter?.showPokemonDetail(for: self.pokemons[indexPath.row])
     }
     
 }

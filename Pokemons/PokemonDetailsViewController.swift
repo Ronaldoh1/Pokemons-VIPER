@@ -8,28 +8,29 @@
 
 import UIKit
 
-class PokemonDetailsViewController: UIViewController {
+class PokemonDetailViewController: UIViewController {
+    
+    var presenter: PokemonDetailPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
         // Do any additional setup after loading the view.
+        
+        presenter?.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+}
+
+extension PokemonDetailViewController: PokemonDetailViewProtocol {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showDetails(for pokemon: Pokemon) {
+        
+        self.navigationItem.title = pokemon.name
     }
-    */
-
 }

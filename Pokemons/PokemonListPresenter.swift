@@ -9,6 +9,7 @@
 import UIKit
 
 class PokemonListPresenter: NSObject, PokemonListPresenterProtocol {
+
     weak var view: PokemonListViewProtocol?
     var interactor: PokemonListInteractorInputProtocol?
     var router: PokemonListRouterProtocol?
@@ -18,8 +19,8 @@ class PokemonListPresenter: NSObject, PokemonListPresenterProtocol {
         interactor?.retrievePokemons()
     }
 
-    func didSelectPokemon(_ pokemon: Pokemon) {
-        
+    func showPokemonDetail(for pokemon: Pokemon) {
+      router?.presentPokemonDetailsScreen(from: view!, for: pokemon)
     }
 
 
