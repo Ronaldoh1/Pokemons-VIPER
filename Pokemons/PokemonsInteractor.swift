@@ -9,22 +9,24 @@
 import Alamofire
 import Foundation
 
-class PokemonsInteractor: PokemonsUseCase {
-
-
-    weak var output: PokemonsInteractorOutput!
-
-    func fetchPokemons(completion:(Pokemons) -> ()?) {
-        //var pokemons:Pokemons?
-        
-        PokemonsAPIService.fetchPokemons { (response) in
-            switch response.result {
-            case .success(let data): break
-                //pokemons = Pokemons(json: data)
-            case .failure(let error):
-                print(error)
-            }
-        }
+class PokemonListInteractor: PokemonListInteractorInputProtocol {
+    weak var presenter: PokemonListInteractorOutputProtocol?
+    var remoteDataManager: PokemonListRemoteDataManagerInputProtocol?
+    
+    func retrievePokemons() {
+        remoteDataManager?.retrievePokemons()
     }
+    
+}
 
+extension PokemonListInteractor: PokemonListRemoteDataManagerOutputProtocol {
+    
+    func onPokemonsRetrieved(_ pokemons: Pokemons) {
+        presenter?.didRetrievePokemons(pokemons)
+    }
+    
+    func onError() {
+        presenter?.onError()
+    }
+    
 }

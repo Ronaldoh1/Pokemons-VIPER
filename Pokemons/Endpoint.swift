@@ -8,25 +8,25 @@
 
 import Foundation
 
-enum Endpoint {
-
-    enum Pokemons: EndPoint {
+enum Endpoints {
+    
+    enum Pokemons: Endpoint {
         case fetchPokemons
-
+        
         public var path: String {
             switch self {
             case .fetchPokemons:
                 return "/pokemon"
             }
         }
-
+        
         public var url: String {
             switch self {
             case .fetchPokemons:
                 return "\(API.baseUrl)\(path)"
             }
         }
-
+        
         public var method: String {
             switch self {
             case .fetchPokemons:
@@ -34,5 +34,5 @@ enum Endpoint {
             }
         }
     }
-
+    
 }

@@ -11,7 +11,7 @@ import UIKit
 
 class ApplicationDependencies {
 
-    var listNavigationHandler = ListNavigationHandler()
+    var listNavigationHandler = PokemonListRouter()
 
     init() {
         configureDependencies()
@@ -21,11 +21,12 @@ class ApplicationDependencies {
        listNavigationHandler.presentListViewController(in: window)
     }
 
-    func configureDependencies() {
-        let pokemonsPresenter = PokemonsPresenter()
-        let pokemonsInteractor = PokemonsInteractor()
+    private func configureDependencies() {
+        let pokemonsPresenter = PokemonListPresenter()
+        let pokemonsInteractor = PokemonListInteractor()
 
         pokemonsPresenter.interactor = pokemonsInteractor
         listNavigationHandler.pokemonsPresenter = pokemonsPresenter
     }
+    
 }

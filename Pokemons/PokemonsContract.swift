@@ -8,50 +8,66 @@
 
 import UIKit
 
-// protocol that defines the view input method
+// protocol that defines the view 
+// passsing data between presenter and view
 
-protocol PokemonsView: IndicatableView {
+protocol PokemonListViewProtocol: class {
 
-    func showPokemonsData(pokemons:[Pokemon])
+    func showPokemons(with pokemons: Pokemons)
     func showNoContentScreen()
+    func showLoading()
+    func hideLoading()
+    func showError()
 
+}
+
+protocol PokemonListRouterProtocol: class {
+    
+    func presentListViewController(in window: UIWindow) 
+    
+    //Presenter to Router
+    func presentPokemonDetailsScreen(from view: PokemonListViewProtocol, for pokemon: Pokemon)
 }
 
 // protocol that defines the commands sent from the view to the presenter
 
+protocol PokemonListPresenterProtocol: class {
 
-protocol PokemonsPresentation: class {
+    weak var view: PokemonListViewProtocol? { get set }
 
-    weak var view: PokemonsView? { get set }
-
-    var interactor: PokemonsUseCase! {get set }
-    var navigationHandler: PokemonsNavigationHandler! { get set }
+    var interactor: PokemonListInteractorInputProtocol? {get set }
+    var router: PokemonListRouterProtocol? { get set }
 
     func viewDidLoad()
-    func didClickSortButton()
     func didSelectPokemon(_ pokemon: Pokemon)
 
 }
 
-protocol PokemonsUseCase: class {
-    weak var output: PokemonsInteractorOutput! { get set}
-    func fetchPokemons(completion:(Pokemons) -> ()?)
+protocol PokemonListInteractorOutputProtocol: class {
+    
+    func didRetrievePokemons(_ pokemons: Pokemons)
+    func onError()
 }
 
-protocol PokemonsInteractorOutput: class {
-
-    func pokemonsFetched(_ pokemons: [Pokemon])
-    func pokemonsFetchFailed()
-
+protocol PokemonListInteractorInputProtocol: class {
+    
+    var presenter: PokemonListInteractorOutputProtocol? { get set }
+    var remoteDataManager: PokemonListRemoteDataManagerInputProtocol? { get set }
+    
+    func retrievePokemons()
+    
 }
 
-protocol PokemonsNavigationHandler: class {
-    weak var viewController: ListViewController? { get set }
-
-    func presentSortOptions(completion: ((PokemonSortType) -> ())?)
-    func presentDetails(forPokemon pokemon: Pokemon)
-
-    static func assembleModule() -> UIViewController
-
+protocol PokemonListRemoteDataManagerInputProtocol: class {
+    
+    var output: PokemonListRemoteDataManagerOutputProtocol? { get set }
+    
+    func retrievePokemons()
 }
 
+// remote data manager -> Interactor
+
+protocol PokemonListRemoteDataManagerOutputProtocol: class {
+    func onPokemonsRetrieved(_ pokemons: Pokemons)
+    func onError()
+}

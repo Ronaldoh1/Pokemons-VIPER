@@ -15,7 +15,7 @@ struct API {
 }
 
 
-protocol EndPoint {
+protocol Endpoint {
 
     var path: String { get }
     var url: String { get }

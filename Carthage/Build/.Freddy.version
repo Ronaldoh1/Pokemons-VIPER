@@ -1,0 +1,28 @@
+{
+  "commitish" : "3.0.2",
+  "iOS" : [
+    {
+      "hash" : "18e55df8a6c243f95100c620031247b0ab725eef0fb70f4a90d0df2d16cead44",
+      "name" : "Freddy"
+    }
+  ],
+  "xcodeVersion" : "Xcode 8.3\nBuild version 8E162",
+  "watchOS" : [
+    {
+      "hash" : "4fd14f9b0b6a0c9ab294f452e7e056be1919c2df27eac7d50bc04ed3ea583408",
+      "name" : "Freddy"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "d5f9ad1177c1d1ed042294a4983e8f947d4be2d4d74294e27968bd95badec6c4",
+      "name" : "Freddy"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "40d0edf298641afce25cac4176071d1488fd2fe46727c4596d64ee681f2624cb",
+      "name" : "Freddy"
+    }
+  ]
+}

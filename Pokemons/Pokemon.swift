@@ -9,7 +9,7 @@
 import UIKit
 import Freddy
 
-struct Pokemon {
+public struct Pokemon {
 
     var name: String
     var url: URL
@@ -18,7 +18,7 @@ struct Pokemon {
 
 extension Pokemon: JSONDecodable {
 
-    init(json: JSON) throws {
+    public init(json: JSON) throws {
         self.name = try json.getString(at: "name")
         let urlStringRaw = try json.getString(at: "url")
 
