@@ -22,11 +22,7 @@ class ApplicationDependencies {
     }
 
     private func configureDependencies() {
-        let pokemonsPresenter = PokemonListPresenter()
-        let pokemonsInteractor = PokemonListInteractor()
-
-        pokemonsPresenter.interactor = pokemonsInteractor
-        listNavigationHandler.pokemonsPresenter = pokemonsPresenter
+     
     }
     
 }

@@ -18,7 +18,6 @@ struct Pokemons {
 extension Pokemons: JSONDecodable {
     
     init(json: JSON) throws {
-        
         let resultsArray = try json.getArray(at: "results")
         var pokemonsArray = [Pokemon]()
         for json in resultsArray {

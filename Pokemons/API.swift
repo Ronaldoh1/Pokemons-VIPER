@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 struct API {
 
@@ -19,6 +20,6 @@ protocol Endpoint {
 
     var path: String { get }
     var url: String { get }
-    var method: String { get } 
+    var method: HTTPMethod { get }
     
 }

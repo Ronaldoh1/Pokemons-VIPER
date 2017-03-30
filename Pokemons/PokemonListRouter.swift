@@ -10,12 +10,10 @@ import UIKit
 
 
 class PokemonListRouter: PokemonListRouterProtocol {
-   
-
-
+    
     weak var viewController: UIViewController?
     var pokemonsPresenter: PokemonListPresenter?
-
+    
     func presentListViewController(in window: UIWindow) {
         let viewController = ListViewController()
         let presenter: PokemonListPresenterProtocol & PokemonListInteractorOutputProtocol = PokemonListPresenter()
@@ -43,5 +41,5 @@ class PokemonListRouter: PokemonListRouterProtocol {
         }
         view.navigationController?.pushViewController(pokemonDetailViewController, animated: true)
     }
-
+    
 }

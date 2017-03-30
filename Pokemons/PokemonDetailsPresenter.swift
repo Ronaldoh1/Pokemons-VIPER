@@ -8,6 +8,7 @@
 
 
 class PokemonDetailPresenter: PokemonDetailPresenterProtocol {
+    
     weak var view: PokemonDetailViewProtocol?
     var router: PokemonDetailRouterProtocol?
     var pokemon: Pokemon?

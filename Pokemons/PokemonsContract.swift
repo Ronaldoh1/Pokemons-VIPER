@@ -8,9 +8,6 @@
 
 import UIKit
 
-// protocol that defines the view 
-// passsing data between presenter and view
-
 protocol PokemonListViewProtocol: class {
 
     func showPokemons(with pokemons: Pokemons)
@@ -27,6 +24,7 @@ protocol PokemonListRouterProtocol: class {
     
     //Presenter to Router
     func presentPokemonDetailsScreen(from view: PokemonListViewProtocol, for pokemon: Pokemon)
+    
 }
 
 // protocol that defines the commands sent from the view to the presenter
@@ -47,6 +45,7 @@ protocol PokemonListInteractorOutputProtocol: class {
     
     func didRetrievePokemons(_ pokemons: Pokemons)
     func onError()
+    
 }
 
 protocol PokemonListInteractorInputProtocol: class {
@@ -63,11 +62,13 @@ protocol PokemonListRemoteDataManagerInputProtocol: class {
     var output: PokemonListRemoteDataManagerOutputProtocol? { get set }
     
     func retrievePokemons()
+    
 }
 
 // remote data manager -> Interactor
 
 protocol PokemonListRemoteDataManagerOutputProtocol: class {
+    
     func onPokemonsRetrieved(_ pokemons: Pokemons)
     func onError()
 }

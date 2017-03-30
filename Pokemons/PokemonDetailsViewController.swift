@@ -11,7 +11,7 @@ import UIKit
 class PokemonDetailViewController: UIViewController {
     
     var presenter: PokemonDetailPresenterProtocol?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
@@ -19,12 +19,12 @@ class PokemonDetailViewController: UIViewController {
         
         presenter?.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 
 extension PokemonDetailViewController: PokemonDetailViewProtocol {
@@ -33,4 +33,5 @@ extension PokemonDetailViewController: PokemonDetailViewProtocol {
         
         self.navigationItem.title = pokemon.name
     }
+    
 }

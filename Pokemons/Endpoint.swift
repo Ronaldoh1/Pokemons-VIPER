@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum Endpoints {
     
@@ -27,10 +28,10 @@ enum Endpoints {
             }
         }
         
-        public var method: String {
+        public var method: HTTPMethod {
             switch self {
             case .fetchPokemons:
-                return "GET"
+                return .get
             }
         }
     }

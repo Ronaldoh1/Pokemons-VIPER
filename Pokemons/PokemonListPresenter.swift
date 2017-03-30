@@ -23,7 +23,6 @@ class PokemonListPresenter: NSObject, PokemonListPresenterProtocol {
       router?.presentPokemonDetailsScreen(from: view!, for: pokemon)
     }
 
-
     private func sortPokemons(by sortType: PokemonSortType) {
         print("sorting by \(sortType)")
     }
@@ -41,6 +40,5 @@ extension PokemonListPresenter: PokemonListInteractorOutputProtocol {
         view?.hideLoading()
         view?.showError()
     }
+    
 }
-
-

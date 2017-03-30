@@ -12,21 +12,24 @@ import Freddy
 
 
 class PokemonListRemoteDataManager: PokemonListRemoteDataManagerInputProtocol {
+    
     var output: PokemonListRemoteDataManagerOutputProtocol?
     
     func retrievePokemons() {
-        Alamofire.request(Endpoints.Pokemons.fetchPokemons.url, method: .get).responseData { response in
+        Alamofire.request(Endpoints.Pokemons.fetchPokemons.url, method: Endpoints.Pokemons.fetchPokemons.method).responseData { response in
+            
             switch response.result {
             case .success(let data):
                 do {
-                let json = try JSON(data: data)
-                let pokemons = try Pokemons(json: json)
-                self.output?.onPokemonsRetrieved(pokemons)
+                    let json = try JSON(data: data)
+                    let pokemons = try Pokemons(json: json)
+                    self.output?.onPokemonsRetrieved(pokemons)
                 } catch let error {
                     print(error)
                 }
-            case .failure(_):
+            case .failure(let error):
                 self.output?.onError()
+                print(error)
             }
             
         }

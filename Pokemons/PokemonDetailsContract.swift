@@ -17,12 +17,13 @@ protocol PokemonDetailViewProtocol: class {
 }
 
 protocol PokemonDetailPresenterProtocol: class {
+    
     weak var view: PokemonDetailViewProtocol? { get set }
     var router: PokemonDetailRouterProtocol? { get set }
     var pokemon: Pokemon? { get set }
     
-    
     func viewDidLoad()
+    
 }
 
 protocol PokemonDetailRouterProtocol: class {

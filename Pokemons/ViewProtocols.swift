@@ -11,6 +11,8 @@ protocol ReusableView: class {
 }
 
 protocol IndicatableView: class {
+    
     func showActivityIndicator()
     func hideActivityIndicator()
+    
 }
